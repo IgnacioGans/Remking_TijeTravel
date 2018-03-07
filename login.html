@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Starter Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]>
+  <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+  <![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.rk_circle {
+    margin-top: 40px;
+    border: 2px #297efd dashed;
+    width: 12px;
+    border-radius: 100%;
+    height: 10px;
+    transform: skew(-21deg,6deg) scale(13,6) rotate(-3deg) translate(10px, 3px);
+    border-top-color: #297efd;
+    border-bottom-color: #fb7901;
+    animation-name: rk_rotate;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+@keyframes rk_rotate {
+  from{ transform: rotate(0); }
+  to{transform: rotate(180);}
+}
+.rk_miniCircle{
+  width: 14px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: red;
+  transform: rotate(0deg) translate(0px, 0px);
+  animation-name: rk_fly;
+  animation-duration: 1s;
+  animation-direction: normal;
+}
+@keyframes rk_fly {
+  from{ transform: rotate(0); }
+  to{transform: rotate(180);}
+}
+.rk_miniCircle.rk_01{
+  background-color: #2485ff;
+  transform: rotate(0deg) translate(81px, -25px);
+}
+.rk_miniCircle.rk_02{
+  background-color: #2485ff;
+  transform: rotate(0deg) translate(160px, -39px);
+}
+.rk_miniCircle.rk_03{
+  background-color: #fb7901;
+  transform: rotate(0deg) translate(128px, -8px);
+}
+.nameCompany{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'OpenSans',helvetica,sans-serif !important;
+}
+.nameCompany.first{
+  color:#fe7902;
+  font-size: 70px
+}
+.nameCompany.first .letterLow{
+  text-transform: lowercase;
+}
+.nameCompany.first .letterLow:last-child{
+  font-size: 95px;  
+}
+.nameCompany.first .downLetter{
+  margin-top: 10px;
+}
+.nameCompany.last{
+  margin-top: -30px;
+  font-style:italic;
+  color:#2485ff;
+  font-size:50px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+      <form class="form-signin">
+        <div class="boxLogo">
+          <div class="rk_circle"></div>
+          <div class="rk_miniCircle rk_01"></div>
+          <div class="rk_miniCircle rk_02"></div>
+          <div class="rk_miniCircle rk_03"></div>
+          <div class="nameCompany first">T<span class="letterLow">I</span><span class="downLetter">J</span><span class="letterLow">E</span></div>
+          <div class="nameCompany last">TRAVEL</div>
+        </div>
+        <h2 class="form-signin-heading">Introduzca los Datos</h2>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input id="user" class="form-control" placeholder="Usuario" required="" autofocus="" type="email">
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input id="rk_st" class="form-control" placeholder="Contraseña" required="" type="password">
+        <div class="checkbox">
+          <label>
+            <input value="remember-me" type="checkbox"> Recordar
+          </label>
+        </div>
+        <button id="rk_ingresar" class="btn btn-lg btn-primary btn-block" type="button">Entrar</button>
+      </form>
+
+    </div>
+  <!-- /.container -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="remking.ajax.js"></script>
+</body>
+</html>
